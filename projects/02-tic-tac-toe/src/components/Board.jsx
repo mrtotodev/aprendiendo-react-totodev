@@ -1,8 +1,8 @@
-import { Square } from "./Square"
+import { Square } from './Square'
 
-export function Board({board, updateBoard}) {
+export function Board ({ board, updateBoard }) {
   return (
-    <section className="game">
+    <section className='game'>
       {
         board.map((square, index) => {
           return (
@@ -19,4 +19,3 @@ export function Board({board, updateBoard}) {
     </section>
   )
 }
-

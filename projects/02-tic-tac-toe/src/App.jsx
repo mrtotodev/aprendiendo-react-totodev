@@ -1,16 +1,16 @@
-import { useState } from "react"
-import confetti from "canvas-confetti"
+import { useState } from 'react'
+import confetti from 'canvas-confetti'
 
-import { checkWinner, checkEndGame } from "./logic/board"
-import { resetGameStorage, saveGameToStorage } from "./logic/storage"
+import { checkWinner, checkEndGame } from './logic/board'
+import { resetGameStorage, saveGameToStorage } from './logic/storage'
 
-import { TURNS } from "./constants"
+import { TURNS } from './constants'
 
-import { WinnerModal } from "./components/WinnerModal"
-import { Board } from "./components/Board"
-import { Turn } from "./components/Turn"
+import { WinnerModal } from './components/WinnerModal'
+import { Board } from './components/Board'
+import { Turn } from './components/Turn'
 
-function App() {
+function App () {
   const [board, setBoard] = useState(() => {
     const boardFromStorage = window.localStorage.getItem('board')
     return boardFromStorage ? JSON.parse(boardFromStorage) : Array(9).fill(null)
@@ -51,7 +51,7 @@ function App() {
   }
 
   return (
-    <main className="board">
+    <main className='board'>
       <h1>Tic tac toe</h1>
       <button onClick={resetGame}>Reiniciar el juego</button>
       <Board board={board} updateBoard={updateBoard} />
